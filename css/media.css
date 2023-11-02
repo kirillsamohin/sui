@@ -6,9 +6,32 @@
 }
 
 @media (max-width: 768px) {
-    .swiper-slide {
-        width: auto; /* Оставляем ширину слайдов по содержимому */
+
+    .logo {
+        color: #000000;
+        padding-top: 46px;
+        font-weight: 900;
+        font-size: 32px;
+        justify-content: center;
+        display: flex;
+        position: absolute;
+       
+        left: 0;
+        right: 0;
+        text-align: center;
     }
+    
+    .swiper{
+        content: "";
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        max-width: auto;
+    }
+
 
     
     .swiper-pagination-bullet {
@@ -27,7 +50,7 @@
 
 
     .background-image {
-        width: auto; /* Оставляем ширину изображений по содержимому */
+        width: 100vh; /* Оставляем ширину изображений по содержимому */
     }
 
     .services{
