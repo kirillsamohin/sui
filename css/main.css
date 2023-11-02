@@ -1,0 +1,237 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.title-1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+/* Header */
+
+.logo {
+    color: #000000;
+    padding-top: 46px;
+    font-weight: 900;
+    font-size: 32px;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.swiper::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.swiper-slide {
+    height: 100vh;
+}
+
+.swiper-pagination-bullet {
+    width: 120px;
+    height: 3px;
+    background-color: #030018;
+    border-radius: 0%;
+    opacity: 1;
+    margin: 0 15px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 50px;
+}
+
+.swiper-pagination-bullet-active {
+    height: 6px;
+    background-color: #FAFAFA;
+}
+
+/* services */
+.services {
+    padding: 45px 0;
+}
+
+.services-row {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+.services-card {
+    flex: 1 1 0;
+    min-width: 315px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.services-card-img {
+    margin-bottom: 10px;
+}
+
+.services-title {
+    margin-bottom: 10px;
+    font-style: 24px;
+    font-weight: 600;
+}
+
+.services-card p {
+    line-height: 2;
+}
+
+/* about us */
+
+.portfolio {
+    padding: 90px 0;
+    background-color: #010101;
+}
+
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.project {
+    text-align: center;
+}
+
+.project-title {
+    font-style: 18px;
+}
+
+.project-img {
+    margin-bottom: 40px;
+}
+
+.project-title a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.portfolio-heading {
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 44px;
+}
+
+.portfolio-content {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 500px;
+    margin-top: 24px;
+    max-width: 500px;
+}
+
+.portfolio-content p {
+    line-height: 2;
+}
+
+/* footer */
+
+.contacts {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.contacts-title {
+    margin-bottom: 40px;
+}
+
+.contacts-content {
+    margin: 0 auto 40px;
+    max-width: 480px;
+    font-style: 18px;
+}
+
+.contacts-button {
+    margin-bottom: 80px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 22px;
+    border-radius: 30px;
+    background-color: #b3b3b3;
+    font-style: 18px;
+    color: #000000;
+    transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #fff;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contacts-footer {
+    color: #828282;
+}
+
+/* Медиазапрос для мобильных устройств (например, ширина экрана менее 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+
+    .title-1 {
+        font-size: 24px; /* Уменьшаем размер заголовков для мобильных устройств */
+    }
+
+        .swiper-slide {
+            height: auto; /* Удалите жестко заданную высоту для мобильных устройств */
+            width: auto;
+        }
+    
+        .swiper-pagination-bullet {
+            width: 80px; /* Измените ширину индикаторов пагинации */
+            height: 2px; /* Измените высоту индикаторов пагинации */
+            margin: 0 10px !important; /* Измените отступы */
+        }
+    
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: 20px; /* Измените расположение пагинации */
+        }
+    
+        .swiper-pagination-bullet-active {
+            height: 4px; /* Измените высоту активного индикатора */
+        }
+        .swiper-slide img {
+            width: auto; /* Оставляем ширину изображений по содержимому */
+        }
+        
+    
+}
