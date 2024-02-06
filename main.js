@@ -5,7 +5,7 @@ function calculate() {
 
     // Получаем элементы калькулятора и видео контейнера
     var calculator = document.getElementById('calculator');
-    var videoContainer = document.getElementById('video-container');
+    var video = document.getElementById('myVideo');
 
     // Скрываем калькулятор
     calculator.style.opacity = '0';
