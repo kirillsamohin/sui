@@ -27,10 +27,13 @@ body {
 }
 
 /* Скрытие видео контейнера */
-#video-container {
+//#video-container {
+//    display: none;
+//    text-align: center;
+//    margin-top: 20px;
+}
+.hide {
     display: none;
-    text-align: center;
-    margin-top: 20px;
 }
 
 /* Стили для мобильной адаптации */
