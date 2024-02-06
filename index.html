@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
@@ -12,9 +12,15 @@
         <div class="buttons">
             <button onclick="calculate()">Посчитать</button>
         </div>
-        <div id="video-container"></div>
+        <div id="video-container">
+            <video id="myVideo" width="560" height="315" controls>
+                <source src="52.mp4" type="video/mp4">
+                Ваш браузер не поддерживает тег video.
+            </video>
+        </div>
     </div>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
