@@ -36,7 +36,11 @@ body {
 #video-container {
   margin-top: 20px;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Анимация появления */
 }
+
+
 
 #myVideo {
   border-radius: 10px;
