@@ -5,12 +5,11 @@ function calculate() {
 
     // Получаем элементы калькулятора и видео контейнера
     var calculator = document.getElementById('calculator');
-    var video = document.getElementById('myVideo');
+    var videoContainer = document.getElementById('video-container');
 
     // Скрываем калькулятор
-    calculator.style.opacity = '0';
-    calculator.style.pointerEvents = 'none';
+    calculator.classList.add('hide');
 
-    
-    video.play();
+    // Убираем класс "hide" у видео контейнера
+    videoContainer.classList.remove('hide');
 }
