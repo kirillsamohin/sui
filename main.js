@@ -3,19 +3,14 @@ function calculate() {
   var result = '52';
   document.getElementById('display').value = result;
 
-  // Скрываем калькулятор и показываем видео
-  var calculator = document.querySelector('.calculator');
-  calculator.classList.add('hidden');
-
+  // Получаем элементы калькулятора и видео контейнера
+  var calculator = document.getElementById('calculator');
   var videoContainer = document.getElementById('video-container');
-  videoContainer.classList.remove('hidden');
-  
-  var video = document.getElementById('myVideo');
-  video.src = '52.mp4'; // Предполагая, что видео находится в папке img
-  video.play(); // Автоматически воспроизводим видео
 
-  // Отслеживаем возможные ошибки при загрузке видео
-  video.onerror = function() {
-    console.error('Ошибка загрузки видео');
-  };
+  // Скрываем калькулятор с плавной анимацией
+  calculator.classList.add('hide');
+  // Показываем видео контейнер с плавной анимацией через короткую задержку
+  setTimeout(function() {
+    videoContainer.classList.remove('hide');
+  }, 500); // 500 миллисекунд (0.5 секунды) - это длительность анимации
 }
