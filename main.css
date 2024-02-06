@@ -38,6 +38,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.hidden {
+    display: none;
+}
 
 #video-container {
   display: none;
