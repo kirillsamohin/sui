@@ -10,6 +10,6 @@ function calculate() {
     // Скрываем калькулятор
     calculator.classList.add('hide');
 
-    // Убираем класс "hide" у видео контейнера
+    // Показываем видео контейнер
     videoContainer.classList.remove('hide');
 }
