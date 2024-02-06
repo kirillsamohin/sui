@@ -11,9 +11,12 @@ function calculate() {
     calculator.style.opacity = '0';
     calculator.style.pointerEvents = 'none';
 
-    // Показываем видео контейнер с задержкой и анимацией
+    // Устанавливаем задержку перед показом видео
     setTimeout(function() {
+        // Показываем видео контейнер
         videoContainer.classList.remove('hide');
+        // Устанавливаем видео контейнеру полную непрозрачность
         videoContainer.style.opacity = '1';
-    }, 1000); // Задержка в 1 секунду перед показом видео
+    }, 500); // Задержка в 0.5 секунды
+    video.play();
 }
