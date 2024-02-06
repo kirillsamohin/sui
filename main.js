@@ -7,7 +7,13 @@ function calculate() {
     var calculator = document.getElementById('calculator');
     var videoContainer = document.getElementById('video-container');
 
-    // Скрываем калькулятор и показываем видео контейнер
-    calculator.style.display = 'none';
-    videoContainer.style.display = 'block';
+    // Скрываем калькулятор
+    calculator.style.opacity = '0';
+    calculator.style.pointerEvents = 'none';
+
+    // Показываем видео контейнер с задержкой и анимацией
+    setTimeout(function() {
+        videoContainer.classList.remove('hide');
+        videoContainer.style.opacity = '1';
+    }, 1000); // Задержка в 1 секунду перед показом видео
 }
