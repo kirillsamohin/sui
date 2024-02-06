@@ -7,9 +7,7 @@ function calculate() {
     var calculator = document.getElementById('calculator');
     var videoContainer = document.getElementById('video-container');
 
-    // Скрываем калькулятор
+    // Скрываем калькулятор и показываем видео контейнер
     calculator.style.display = 'none';
-    
-    // Показываем видео контейнер
     videoContainer.style.display = 'block';
 }
