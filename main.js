@@ -11,5 +11,11 @@ function calculate() {
   videoContainer.classList.remove('hidden');
   
   var video = document.getElementById('myVideo');
-  video.src = '52.mp4';
+  video.src = '52.mp4'; // Предполагая, что видео находится в папке img
+  video.play(); // Автоматически воспроизводим видео
+
+  // Отслеживаем возможные ошибки при загрузке видео
+  video.onerror = function() {
+    console.error('Ошибка загрузки видео');
+  };
 }
