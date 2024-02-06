@@ -1,72 +1,50 @@
 /* Общие стили */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .calculator {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 600px;
+    text-align: center;
+    margin-top: 50px; /* Добавим отступ сверху для центрирования */
 }
 
 .buttons button {
-  background-color: #3498db;
-  border: none;
-  border-radius: 5px;
-  color: #ffffff;
-  cursor: pointer;
-  height: 40px;
-  margin: 10px;
-  width: 100px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Анимация при наведении */
 }
 
-#display {
-  width: calc(100% - 20px);
-  margin: 10px;
-  padding: 5px;
+.buttons button:hover {
+    background-color: #2980b9; /* Изменение цвета при наведении */
 }
 
-
-  #video-container {
-  margin-top: 20px;
-  text-align: center;
-  
+/* Стили для видео контейнера */
+#video-container {
+    text-align: center;
 }
 
-
+/* Скрытие видео контейнера */
 .hide {
     display: none;
 }
 
-
-
-#myVideo {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-}
-
-/* Мобильная адаптация */
+/* Стили для адаптации на мобильные устройства */
 @media screen and (max-width: 600px) {
-  .calculator {
-    padding: 10px;
-  }
+    .calculator {
+        margin-top: 20px; /* Уменьшим отступ сверху на мобильных устройствах */
+    }
 
-  #display {
-    width: calc(100% - 20px);
-    margin: 10px 0;
-  }
-
-  .buttons button {
-    width: 80px;
-    height: 30px;
-    margin: 5px;
-  }
+    .buttons button {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
 }
