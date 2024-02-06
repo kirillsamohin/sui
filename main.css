@@ -26,17 +26,14 @@ body {
     background-color: #2980b9; /* Изменение цвета при наведении */
 }
 
-/* Стили для видео контейнера */
-#video-container {
-    text-align: center;
-}
-
 /* Скрытие видео контейнера */
-.hide {
+#video-container {
     display: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Стили для адаптации на мобильные устройства */
+/* Стили для мобильной адаптации */
 @media screen and (max-width: 600px) {
     .calculator {
         margin-top: 20px; /* Уменьшим отступ сверху на мобильных устройствах */
