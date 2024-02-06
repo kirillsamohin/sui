@@ -1,39 +1,63 @@
+/* Общие стили */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
 .calculator {
-  text-align: center;
   background-color: #ffffff;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 .buttons button {
-  width: 100px;
-  height: 40px;
-  margin: 10px;
   background-color: #3498db;
-  color: #ffffff;
   border: none;
   border-radius: 5px;
+  color: #ffffff;
   cursor: pointer;
+  height: 40px;
+  margin: 10px;
+  width: 100px;
+}
+
+#display {
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 5px;
 }
 
 #video-container {
-  display: none;
   margin-top: 20px;
+  text-align: center;
 }
 
 #myVideo {
-  width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 600px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  #display {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+  }
+
+  .buttons button {
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+  }
 }
