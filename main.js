@@ -8,18 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.play();
         } else {
             audio.pause();
+            // Сбрасываем время воспроизведения на 0, чтобы при следующем включении песня начиналась сначала
+            audio.currentTime = 0;
         }
     }
 
-    // Включаем музыку при открытии открытки
+    // Функция для проверки, является ли устройство сенсорным
+    function isTouchDevice() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints;
+    }
+
+    // Включаем музыку при открытии открытки на компьютере
     card.addEventListener('mouseenter', function() {
-        toggleAudio();
+        if (!isTouchDevice()) {
+            toggleAudio();
+        }
     });
 
-    // Если на мобильном устройстве, переключаем музыку при касании открытки
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        card.addEventListener('touchstart', function() {
-            toggleAudio();
-        });
-    }
+    // Включаем музыку при касании открытки на мобильных устройствах
+    card.addEventListener('touchstart', function() {
+        toggleAudio();
+    });
 });
