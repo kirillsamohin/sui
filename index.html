@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор</title>
+    <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="calculator" id="calculator">
-        <input type="text" id="display" readonly>
-        <div class="buttons">
-            <button onclick="calculate()">Посчитать</button>
-        </div>
-    </div>
-    <div id="video-container" class="hide">
-        <video id="myVideo" width="560" height="315" controls autoplay>
-            <source src="52.mp4" type="video/mp4">
-            Ваш браузер не поддерживает тег video.
-        </video>
-    </div>
-    <script src="main.js"></script>
+
+<div class="card">
+  <div class="imgBox">
+    <div class="bark"></div>
+    <img src="300x400.png">
+  </div>
+  <div class="details">
+    <h4 class="color1">Поздравляю</h4>
+    <h4 class="color2 margin">С 8 марта</h4>
+    <p>От всей души поздравляю с Международным женским днем! </p>
+    <p>Пусть жизнь будет наполнена яркими событиями, чудесными моментами и теплотой.</p>
+    <p>Желаю, чтобы настроение было по-настоящему весенним.</p>
+    <p>Желаю женского счастья и благополучия.</p>
+    <p>Пусть каждый день будет лучше предыдущего.</p>
+    <p>Пусть окружают только искренние и понимающие люди.</p>
+    <p class="text-right">С 8 марта!</p>
+    <p class="text-right">Кирюша♥</p>
+  </div>
+</div>
+
+<audio id="bgAudio">
+  <source src="kiss the rain.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script src="main.js"></script>
 </body>
 </html>
