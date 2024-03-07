@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // На компьютере включаем музыку при загрузке страницы
+    // На компьютере включаем музыку при открытии открытки
     if (!isMobile) {
-        toggleAudio();
+        card.addEventListener('mouseenter', function() {
+            toggleAudio();
+        });
     }
 
     // Если на мобильном устройстве, включаем музыку по клику на открытке
