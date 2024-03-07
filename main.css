@@ -125,36 +125,35 @@ h4 {
 }
 
 /* Media queries for mobile adaptation */
+/* Media queries for mobile adaptation */
 @media screen and (max-width: 600px) {
     .card {
         width: 90%;
         max-width: 300px;
         margin: 20px auto;
+        height: auto; /* Добавляем auto значение для высоты */
+        perspective: none; /* Отменяем perspective для мобильной версии */
     }
 
     .card .details {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: calc(100% - 30px); /* Adjust width to fit within card container */
-        height: calc(100% - 30px); /* Adjust height to fit within card container */
-        padding: 15px; /* Adjust padding for better spacing */
-        overflow-y: auto; /* Enable scrolling if content exceeds */
+        position: static; /* Изменяем позицию на static */
+        padding: 15px; /* Увеличиваем отступы для лучшего читаемости */
+        z-index: 1; /* Убираем z-index - пусть текст находится поверх изображения */
+        transform: none; /* Убираем transform */
+        background: #fdfcdc; /* Устанавливаем фон */
     }
 
     .card .details h4 {
-        font-size: 18px; /* Reduce font size for better fit */
-        margin-bottom: 8px; /* Adjust spacing for better readability */
+        font-size: 20px; /* Уменьшаем размер шрифта заголовков */
+        margin-bottom: 10px; /* Увеличиваем отступ между заголовками */
     }
 
     .card .details p {
-        font-size: 14px; /* Reduce font size for better fit */
-        line-height: 1.5; /* Increase line height for better readability */
-        margin-bottom: 8px; /* Adjust spacing for better readability */
+        font-size: 14px; /* Уменьшаем размер шрифта текста */
+        line-height: 1.6; /* Увеличиваем межстрочный интервал */
     }
 
     .text-right {
-        text-align: center; /* Center-align text */
-        padding-right: 0; /* Remove padding right */
+        text-align: center; /* Центрируем текст в мобильной версии */
     }
 }
