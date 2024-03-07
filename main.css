@@ -1,50 +1,152 @@
-/* Общие стили */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Indie Flower', cursive !important;
+    background: #f8f3eb; /* Creamy background */
     margin: 0;
     padding: 0;
 }
 
-.calculator {
+::selection {
+    background: transparent;
+}
+
+h4 {
+    font-size: 26px;
+    font-family: 'Amatic SC', cursive !important;
+    margin-top: 10px;
+    color: #4d4b4b; /* Dark gray */
+}
+
+.color1 {
+    color: #547980; /* Soft green */
+}
+
+.color2 {
+    color: #91684a; /* Beige */
+}
+
+.card {
+    color: #4d4b4b; /* Dark gray */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    background: #fdfcdc; /* Light beige background */
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    transition: 1s;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #e0e0e0; /* Creamy background */
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #e0e0e0; /* Creamy background */
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card .imgBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: .7s;
+}
+
+.card .bark {
+    position: absolute;
+    background: #fdfcdc; /* Creamy background */
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s;
+}
+
+.card .imgBox img {
+    min-width: 250px;
+    max-height: 400px;
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+    opacity: 1;
+    transition: .6s;
+}
+
+.card .details {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 15px; /* Padding right and left */
+    z-index: -1;
+    background-color: #fdfcdc; /* Light beige background */
+}
+
+.card .details p {
+    font-size: 15px;
+    line-height: 17px;
+    padding: 0 0 5px 0;
+    margin: 0;
+}
+
+.card .details h4 {
     text-align: center;
-    margin-top: 50px; /* Добавим отступ сверху для центрирования */
+    margin-bottom: 5px;
 }
 
-.buttons button {
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Анимация при наведении */
+.text-right {
+    text-align: right;
+    padding-right: 15px; /* Padding right */
 }
-
-.buttons button:hover {
-    background-color: #2980b9; /* Изменение цвета при наведении */
-}
-
-/* Скрытие видео контейнера */
-//#video-container {
-//    display: none;
-//    text-align: center;
-//    margin-top: 20px;
-}
-.hide {
-    display: none;
-}
-
-/* Стили для мобильной адаптации */
 @media screen and (max-width: 600px) {
-    .calculator {
-        margin-top: 20px; /* Уменьшим отступ сверху на мобильных устройствах */
+    .card {
+        width: 90vw;
+        max-width: 300px;
+        margin: 20px auto;
     }
 
-    .buttons button {
-        width: 120px;
-        height: 40px;
-        font-size: 16px;
+    .details {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 90%;
+        max-width: 250px;
+        height: 250px; /* Фиксированная высота блока */
+        overflow-y: auto; /* Добавление вертикальной полосы прокрутки */
+        padding: 10px;
+        background-color: #f9f9f9; /* Цвет фона */
+        border-radius: 10px; /* Закругление углов */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    }
+
+    .details p {
+        margin-bottom: 10px; /* Добавление отступа между параграфами */
     }
 }
+
+
+
