@@ -14,13 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // На компьютере включаем музыку при загрузке страницы
+    if (!isMobile) {
+        toggleAudio();
+    }
+
     // Если на мобильном устройстве, включаем музыку по клику на открытке
     if (isMobile) {
         card.addEventListener('touchstart', function() {
             toggleAudio();
         });
-    } else {
-        // На компьютере включаем музыку при загрузке страницы
-        audio.play();
     }
 });
