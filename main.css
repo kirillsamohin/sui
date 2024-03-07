@@ -98,30 +98,32 @@ h4 {
 .card .details {
     position: absolute;
     top: 15px;
-    left: 0;
+    left: 15px; /* Updated to provide better alignment */
+    right: 15px; /* Updated to provide better alignment */
+    bottom: 15px; /* Updated to provide better alignment */
     box-sizing: border-box;
-    padding: 0 15px; /* Padding right and left */
-    z-index: -1;
+    padding: 15px; /* Padding right and left */
+    z-index: 1;
     background-color: #fdfcdc; /* Light beige background */
+    overflow-y: auto; /* Add overflow-y to enable scrolling if content exceeds */
 }
 
 .card .details p {
     font-size: 15px;
-    line-height: 17px;
-    padding: 0 0 5px 0;
-    margin: 0;
+    line-height: 20px; /* Increase line height for better readability */
+    margin-bottom: 10px; /* Add more space between paragraphs */
 }
 
 .card .details h4 {
-    text-align: center;
-    margin-bottom: 5px;
+    font-size: 22px; /* Increase font size for better readability */
+    margin-bottom: 10px; /* Add more space between headings and paragraphs */
 }
 
 .text-right {
     text-align: right;
     padding-right: 15px; /* Padding right */
 }
-/* Media queries for mobile adaptation */
+
 /* Media queries for mobile adaptation */
 @media screen and (max-width: 600px) {
     .card {
@@ -134,23 +136,25 @@ h4 {
         position: relative;
         top: auto;
         left: auto;
-        z-index: 1;
-        padding: 10px; /* Подберите подходящий вам отступ */
+        width: calc(100% - 30px); /* Adjust width to fit within card container */
+        height: calc(100% - 30px); /* Adjust height to fit within card container */
+        padding: 15px; /* Adjust padding for better spacing */
+        overflow-y: auto; /* Enable scrolling if content exceeds */
     }
 
     .card .details h4 {
-        font-size: 20px; /* Уменьшаем размер шрифта заголовков */
-        margin-bottom: 3px; /* Уменьшаем отступы для лучшего компактного вида */
+        font-size: 18px; /* Reduce font size for better fit */
+        margin-bottom: 8px; /* Adjust spacing for better readability */
     }
 
     .card .details p {
-        font-size: 14px; /* Уменьшаем размер шрифта текста */
-        line-height: 1.4; /* Уменьшаем межстрочный интервал для лучшей читаемости */
-        margin-bottom: 8px; /* Уменьшаем отступы между абзацами */
+        font-size: 14px; /* Reduce font size for better fit */
+        line-height: 1.5; /* Increase line height for better readability */
+        margin-bottom: 8px; /* Adjust spacing for better readability */
     }
 
     .text-right {
-        text-align: center; /* Центрируем текст в мобильной версии */
-        padding: 0; /* Убираем отступы справа */
+        text-align: center; /* Center-align text */
+        padding-right: 0; /* Remove padding right */
     }
 }
