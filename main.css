@@ -98,25 +98,23 @@ h4 {
 .card .details {
     position: absolute;
     top: 15px;
-    left: 15px; /* Updated to provide better alignment */
-    right: 15px; /* Updated to provide better alignment */
-    bottom: 15px; /* Updated to provide better alignment */
+    left: 0;
     box-sizing: border-box;
-    padding: 15px; /* Padding right and left */
-    z-index: 1;
+    padding: 0 15px; /* Padding right and left */
+    z-index: -1;
     background-color: #fdfcdc; /* Light beige background */
-    overflow-y: auto; /* Add overflow-y to enable scrolling if content exceeds */
 }
 
 .card .details p {
     font-size: 15px;
-    line-height: 20px; /* Increase line height for better readability */
-    margin-bottom: 10px; /* Add more space between paragraphs */
+    line-height: 17px;
+    padding: 0 0 5px 0;
+    margin: 0;
 }
 
 .card .details h4 {
-    font-size: 22px; /* Increase font size for better readability */
-    margin-bottom: 10px; /* Add more space between headings and paragraphs */
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .text-right {
@@ -125,35 +123,39 @@ h4 {
 }
 
 /* Media queries for mobile adaptation */
-/* Media queries for mobile adaptation */
 @media screen and (max-width: 600px) {
     .card {
         width: 90%;
         max-width: 300px;
         margin: 20px auto;
-        height: auto; /* Добавляем auto значение для высоты */
-        perspective: none; /* Отменяем perspective для мобильной версии */
+        height: auto; /* Устанавливаем автоматическую высоту */
+        perspective: none; /* Отменяем perspective */
+    }
+
+    .card:before,
+    .card:after {
+        display: none; /* Скрытие псевдоэлементов на мобильных устройствах */
     }
 
     .card .details {
-        position: static; /* Изменяем позицию на static */
-        padding: 15px; /* Увеличиваем отступы для лучшего читаемости */
-        z-index: 1; /* Убираем z-index - пусть текст находится поверх изображения */
-        transform: none; /* Убираем transform */
-        background: #fdfcdc; /* Устанавливаем фон */
+        position: static; /* Устанавливаем позицию на static */
+        padding: 15px; /* Увеличиваем внутренние отступы */
+        z-index: 1; /* Помещаем текст поверх изображения */
+        transform: none; /* Отменяем transform */
+        background-color: transparent; /* Прозрачный фон */
     }
 
     .card .details h4 {
-        font-size: 20px; /* Уменьшаем размер шрифта заголовков */
-        margin-bottom: 10px; /* Увеличиваем отступ между заголовками */
+        font-size: 20px; /* Уменьшаем размер заголовков */
+        margin-bottom: 10px; /* Увеличиваем отступ после заголовков */
     }
 
     .card .details p {
-        font-size: 14px; /* Уменьшаем размер шрифта текста */
+        font-size: 14px; /* Уменьшаем размер текста */
         line-height: 1.6; /* Увеличиваем межстрочный интервал */
     }
 
     .text-right {
-        text-align: center; /* Центрируем текст в мобильной версии */
+        text-align: center; /* Центрируем текст */
     }
 }
