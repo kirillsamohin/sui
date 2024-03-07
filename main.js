@@ -1,15 +1,18 @@
-function calculate() {
-    // Вместо реальных вычислений, возвращаем желаемый ответ
-    var result = '52';
-    document.getElementById('display').value = result;
+document.addEventListener('DOMContentLoaded', function() {
+    const card = document.querySelector('.card');
+    const audio = document.getElementById('bgAudio');
 
-    // Получаем элементы калькулятора и видео контейнера
-    var calculator = document.getElementById('calculator');
-    var videoContainer = document.getElementById('video-container');
+    card.addEventListener('mouseenter', function() {
+        this.classList.add('hovered');
+        // Если песня не воспроизводится, запускаем её
+        if (audio.paused) {
+            audio.play();
+        }
+    });
 
-    // Скрываем калькулятор
-    calculator.classList.add('hide');
-
-    // Показываем видео контейнер
-    videoContainer.classList.remove('hide');
-}
+    card.addEventListener('mouseleave', function() {
+        this.classList.remove('hovered');
+        // При закрытии открытки останавливаем песню
+        audio.pause();
+    });
+});
