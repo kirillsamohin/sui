@@ -3,12 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('bgAudio');
 
     card.addEventListener('click', function() {
-        this.classList.toggle('hovered');
-        // Переключение воспроизведения музыки при клике на открытку
+        toggleCard();
+    });
+
+    card.addEventListener('touchstart', function() {
+        toggleCard();
+    });
+
+    function toggleCard() {
+        card.classList.toggle('hovered');
+        // Переключение воспроизведения музыки при открытии и закрытии открытки
         if (audio.paused) {
             audio.play();
         } else {
             audio.pause();
         }
-    });
+    }
 });
