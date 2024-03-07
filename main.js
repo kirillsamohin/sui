@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Если на мобильном устройстве, включаем музыку по клику на открытке
     if (isMobile) {
-        card.addEventListener('click', function() {
+        card.addEventListener('touchstart', function() {
             toggleAudio();
         });
     } else {
