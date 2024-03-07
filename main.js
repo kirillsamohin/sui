@@ -2,21 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const card = document.querySelector('.card');
     const audio = document.getElementById('bgAudio');
 
-    card.addEventListener('click', function() {
-        toggleCard();
-    });
+    // Проверяем, находится ли страница на мобильном устройстве
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    card.addEventListener('touchstart', function() {
-        toggleCard();
-    });
-
-    function toggleCard() {
-        card.classList.toggle('hovered');
-        // Переключение воспроизведения музыки при открытии и закрытии открытки
+    // Функция для включения и выключения музыки
+    function toggleAudio() {
         if (audio.paused) {
             audio.play();
         } else {
             audio.pause();
         }
+    }
+
+    // Если на мобильном устройстве, включаем музыку по клику на открытке
+    if (isMobile) {
+        card.addEventListener('click', function() {
+            toggleAudio();
+        });
+    } else {
+        // На компьютере включаем музыку при загрузке страницы
+        audio.play();
     }
 });
