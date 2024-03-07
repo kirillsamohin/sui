@@ -121,30 +121,36 @@ h4 {
     text-align: right;
     padding-right: 15px; /* Padding right */
 }
+/* Media queries for mobile adaptation */
 @media screen and (max-width: 600px) {
     .card {
-        width: 90vw;
+        width: 90%;
         max-width: 300px;
         margin: 20px auto;
     }
 
-    .details {
+    .card .details {
         position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        width: 90%;
-        max-width: 250px;
-        height: 250px; /* Фиксированная высота блока */
-        overflow-y: auto; /* Добавление вертикальной полосы прокрутки */
-        padding: 10px;
-        background-color: #f9f9f9; /* Цвет фона */
-        border-radius: 10px; /* Закругление углов */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+        top: auto;
+        left: auto;
+        z-index: 1;
+        padding: 10px; /* Подберите подходящий вам отступ */
     }
 
-    .details p {
-        margin-bottom: 10px; /* Добавление отступа между параграфами */
+    .card .details h4 {
+        font-size: 20px; /* Уменьшаем размер шрифта заголовков */
+        margin-bottom: 3px; /* Уменьшаем отступы для лучшего компактного вида */
+    }
+
+    .card .details p {
+        font-size: 14px; /* Уменьшаем размер шрифта текста */
+        line-height: 1.4; /* Уменьшаем межстрочный интервал для лучшей читаемости */
+        margin-bottom: 8px; /* Уменьшаем отступы между абзацами */
+    }
+
+    .text-right {
+        text-align: center; /* Центрируем текст в мобильной версии */
+        padding: 0; /* Убираем отступы справа */
     }
 }
 
