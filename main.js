@@ -13,16 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Функция для проверки, является ли устройство сенсорным
-    function isTouchDevice() {
-        return 'ontouchstart' in window || navigator.maxTouchPoints;
-    }
-
-    // Включаем музыку при открытии открытки на компьютере
-    card.addEventListener('mouseenter', function() {
-        if (!isTouchDevice()) {
-            toggleAudio();
-        }
+    // Включаем музыку при клике на открытку на компьютере
+    card.addEventListener('click', function() {
+        toggleAudio();
     });
 
     // Включаем музыку при касании открытки на мобильных устройствах
