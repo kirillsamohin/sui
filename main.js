@@ -2,29 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const card = document.querySelector('.card');
     const audio = document.getElementById('bgAudio');
 
-    function openCard() {
-        card.classList.add('hovered');
-        // Play "Kiss the Rain" song upon opening the card
-        audio.play();
-    }
-
-    function closeCard() {
-        card.classList.remove('hovered');
-        // Pause the song when the card is closed
-        audio.pause();
-    }
-
-    card.addEventListener('mouseenter', openCard);
-    card.addEventListener('mouseleave', closeCard);
-    card.addEventListener('click', function(event) {
-        // Если пользователь нажал на открытку, и она уже открыта,
-        // то закрываем открытку. В противном случае открываем.
-        if (card.classList.contains('hovered')) {
-            closeCard();
+    card.addEventListener('click', function() {
+        this.classList.toggle('hovered');
+        // Переключение воспроизведения музыки при клике на открытку
+        if (audio.paused) {
+            audio.play();
         } else {
-            openCard();
+            audio.pause();
         }
-        // Предотвращаем стандартное поведение ссылки при клике
-        event.preventDefault();
     });
 });
