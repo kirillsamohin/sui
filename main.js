@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.play();
         } else {
             audio.pause();
-            // Сбрасываем время воспроизведения на 0, чтобы при следующем включении песня начиналась сначала
-            audio.currentTime = 0;
         }
     }
 
